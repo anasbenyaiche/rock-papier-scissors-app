@@ -1,0 +1,10 @@
+.choice-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  margin-bottom: 10px;
+}
+.active-choice {
+  background-color: orange;
+}

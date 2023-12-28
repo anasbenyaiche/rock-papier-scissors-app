@@ -1,0 +1,44 @@
+.score-container {
+  display: flex;
+  justify-content: space-between;
+
+  h3 {
+    margin-top: 0px;
+    padding: 20px;
+    background-color: #27155e;
+    color: #fff;
+  }
+
+  .score {
+    width: 200px;
+    background-color: #fff;
+    margin-bottom: 20px;
+  }
+}
+.result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+  height: 200px;
+}
+.player-hand,
+.computer-hand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  position: relative;
+}
+.mid-col {
+  color: #fff;
+  max-width: 400px;
+}
+.timer {
+  color: #fff;
+  font-size: 200px;
+}
