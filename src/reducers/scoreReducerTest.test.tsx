@@ -59,4 +59,35 @@ describe("score reducer", () => {
 
     expect(screen.getByText(/playerhand: 2/)).toBeTruthy();
   });
+  it("should update the score with the player one winning", () => {
+    render(
+      <TestingComponent
+        myaction={{ type: OptionActionKind.PLAYER_WIN, payload: "Player win" }}
+      />
+    );
+    screen.getByText(/winner is : Player /i);
+  });
+  it("should update the score with the computer one winning", () => {
+    render(
+      <TestingComponent
+        myaction={{
+          type: OptionActionKind.COMPUTER_WIN,
+          payload: "Computer win",
+        }}
+      />
+    );
+
+    screen.getByText(/winner is : Computer /i);
+  });
+  it("should not update when it s a draw", () => {
+    render(
+      <TestingComponent
+        myaction={{
+          type: OptionActionKind.DRAW,
+          payload: "Computer win",
+        }}
+      />
+    );
+    screen.getByText(/Draw /i);
+  });
 });

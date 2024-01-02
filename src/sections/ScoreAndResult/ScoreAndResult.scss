@@ -42,3 +42,49 @@
   color: #fff;
   font-size: 200px;
 }
+.shaking-hands {
+  animation: playercshakeanimation 0.8s ease-in-out infinite;
+}
+.computer-shaking-hands {
+  animation: computershakeanimation 0.8s ease-in-out infinite;
+}
+
+@keyframes playercshakeanimation {
+  0%,
+  100% {
+    transform: rotate(100deg);
+  }
+  50% {
+    transform: rotate(80deg);
+  }
+}
+@keyframes computershakeanimation {
+  0%,
+  100% {
+    transform: scaleY(-1) rotate(-100deg);
+  }
+  50% {
+    transform: scaleY(-1) rotate(-80deg);
+  }
+}
+.winner {
+  animation: winneranimation 2s ease-in-out;
+}
+@keyframes winneranimation {
+  30% {
+    transform: scale(1.2);
+  }
+  40%,
+  60% {
+    transform: rotate(-20deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(20) scale(1.1);
+  }
+  70% {
+    transform: rotate(0deg) scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

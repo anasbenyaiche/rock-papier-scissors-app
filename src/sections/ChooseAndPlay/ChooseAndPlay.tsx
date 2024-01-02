@@ -9,6 +9,7 @@ const ChooseAndPlay = () => {
 
   const play = () => {
     const randomNumber = generateRandomNumber();
+
     dispatch({
       type: OptionActionKind.UPDATE_COMPUTER_CHOICE,
       payload: randomNumber,
